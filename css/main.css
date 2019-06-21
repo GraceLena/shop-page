@@ -94,7 +94,7 @@ button a:hover {
 	position: relative;
 }
 
-.product-discription {
+.product-description {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -109,19 +109,19 @@ button a:hover {
 	display: none;
 }
 
-.product-discription-cell {
+.product-description-cell {
 	text-align: center;
 	display: table;
 	width: 100%;
 	height: 100%;
 }
 
-.product-discription-cell p{
+.product-description-cell p{
 	vertical-align: middle;
 	display: table-cell;
 }
 
-.product-discription-title {
+.product-description-title {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 1.2em;
@@ -130,7 +130,7 @@ button a:hover {
 	display: block;
 }
 
-.product .thumbnail:hover .product-discription {
+.product .thumbnail:hover .product-description {
 	display: block;
 }
 
@@ -180,4 +180,30 @@ footer {
 	height: 38px;
 	width: 38px;
 	display: block;
+}
+
+@media print {
+	.product-description {
+		position: static;
+		display: block;
+		border-top: 1px solid #ddd;
+		height: 160px;
+		text-overflow: ellipsis;
+	}
+
+	aside,
+	.buy-btn,
+	footer,
+	#add-product-popup {
+		display: none !important;
+	}
+
+	.product-price {
+		position: static;
+		float: right;
+	}
+
+	main {
+		width: 100% !important;
+	}
 }
