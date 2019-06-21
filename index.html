@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Home</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+	<script src="js/jquery-3.4.1.min.js" defer></script>
+	<script src="js/bootstrap.min.js" defer></script>
+	<script src="js/script.js" defer></script>
+</head>
+<body>
+	<header class="container-fluid">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#eshop-nav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">EShop</a>
+				</div>
+				<div id="eshop-nav" class="collapse navbar-collapse">
+					<ul id="shopping-cart-menu" class="nav navbar-nav navbar-right hidden">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-shopping-cart"></i> Shopping cart (<span class="total-count">0</span>)<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu shopping-cart-items">
+								<li>Total count: <span class="total-count"></span></li>
+								<li>Total cost: <span class="total-cost"></span></li>
+								<li><button class="btn btn-primary btn-block"><a href="shopping-cart.html">View cart</a></button></li>
+							</ul>
+						</li>
+					</ul>
+					<button id="sign-in-btn" href="#" class="btn btn-primary navbar-btn navbar-right"><i class="fab fa-facebook-f"></i> Sign in</button>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<aside class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+				<div class="visible-xs-block xs-options-container">
+					<a class="pull-right" data-toggle="collapse" href="#product-catalog">Product catalog <span class="caret"></span></a>
+					<a data-toggle="collapse" href="#find-products">Find products <span class="caret"></span></a>
+				</div>
+				<form id="product-search" action="index.html">
+					<div id="find-products" class="panel panel-success collapse">
+						<div class="panel-heading">Find product</div>
+						<div class="panel-body">
+							<div class="input-group">
+								<input type="text" class="form-control" name="product-search-query" placeholder="Search query">
+								<span class="input-group-btn">
+									<button class="btn btn-default" id="btn-search" type="submit">Go!</button>
+								</span>
+							</div>
+							<div class="more-options">
+								<a data-toggle="collapse" href="#search-options">
+									More filters <span class="caret"></span>
+								</a>
+							</div>
+						</div>
+						<div id="search-options" class="panel-success collapse">
+							<div class="panel-heading">Category filters</div>
+							<div class="panel-body categories">
+								<label><input type="checkbox" id="all-categories"> All</label>
+								<div class="form-group">
+									<div class="checkbox">
+										<label><input type="checkbox" name="category" value="1" class="search-option"> E-book (78)</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="checkbox">
+										<label><input type="checkbox" name="category" value="2" class="search-option"> MP3-player (75)</label>
+									</div>
+								</div>
+							</div>
+							<div class="panel-heading">Producer filters</div>
+							<div class="panel-body producers">
+								<label><input type="checkbox" id="all-producers"> All</label>
+								<div class="form-group">
+									<div class="checkbox">
+										<label><input type="checkbox" name="producer" value="1" class="search-option"> Dell (56)</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="checkbox">
+										<label><input type="checkbox" name="producer" value="2" class="search-option"> Lenovo (22)</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div id="product-catalog" class="panel panel-success collapse">
+					<div class="panel-heading">Product catalog</div>
+					<div class="list-group">
+						<a href="#" class="list-group-item">E-book<span class="badge">78</span></a>
+						<a href="#" class="list-group-item">MP3-player<span class="badge">75</span></a>
+						<a href="#" class="list-group-item">Notebook<span class="badge">110</span></a>
+						<a href="#" class="list-group-item">Phone<span class="badge">113</span></a>
+						<a href="#" class="list-group-item">Smartphone<span class="badge">216</span></a>
+						<a href="#" class="list-group-item">Smartwatch<span class="badge">95</span></a>
+						<a href="#" class="list-group-item">Tablet<span class="badge">211</span></a>
+					</div>
+				</div>
+			</aside>
+			<main class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+				<div id="product-list">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278057" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product1.jpg" alt="product1">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Diagonal 2.4" / 1000 mA/h / Weight 120 g / 2 SD cards / USB / FM receiver / Dictophone</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Jeka JBF276018</h4>
+									<div class="product-code">Code: 278057</div>
+									<div class="product-price">$ 50</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278057">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">MP3-player</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Jeka</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278019" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product2.jpg" alt="product2">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Monitor 17" / RAM 4 GB / HDD 320 GB / Silver / Weight 2600 g / HDMI / GPS / Bluetooth</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Dell DHT226445</h4>
+									<div class="product-code">Code: 278019</div>
+									<div class="product-price">$ 1200</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278019">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">Notebook</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Dell</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278012" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product3.jpg" alt="product3">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Monitor diagonal 9" / Matrix type: E lnk Pearl / Resolution: 1600x1200 / Memory 6 GB / Weight 190&nbsp;g</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">PocketBook ACJ838K4</h4>
+									<div class="product-code">Code: 278012</div>
+									<div class="product-price">$ 90</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278012">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">E-book</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">PocketBook</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278009" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product4.jpg" alt="product4">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Monitor diagonal 6.0" / Camera: 3.2Mp / RAM: 4&nbsp;Gb / Orange / 1100 mA/h / Weight 220 g / WiFi / Bluetooth / Dictophone / USB</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Prestigio DOF74132</h4>
+									<div class="product-code">Code: 278009</div>
+									<div class="product-price">$ 300</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278009">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">Smartphone</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Prestigio</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278014" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product5.jpg" alt="product5">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Monitor diagonal 4.0" / Camera: 1.2Mp / RAM: 4&nbsp;Gb / Orange / 1500 mA/h / Weight 150 g / WiFi / Bluetooth / Dictophone / USB</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Nokia DB5180638</h4>
+									<div class="product-code">Code: 278014</div>
+									<div class="product-price">$ 80</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278014">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">Phone</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Nokia</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278044" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product6.jpg" alt="product6">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Monitor 9" / RAM 3 GB / HDD 370 GB / Black / Weight 260 g / Bluetooth / 3G / USB / GPS</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Lenovo</h4>
+									<div class="product-code">Code: 278044</div>
+									<div class="product-price">$ 400</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278044">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">Tablet</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Lenovo</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278037" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product1.jpg" alt="product7">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Diagonal 2.4" / 1000 mA/h / Weight 120 g / 2 SD cards / USB / FM receiver / Dictophone</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Jeka JBF276018</h4>
+									<div class="product-code">Code: 278037</div>
+									<div class="product-price">$ 50</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278037">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">MP3-player</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Jeka</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278025" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product2.jpg" alt="product8">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Monitor 17" / RAM 4 GB / HDD 320 GB / Silver / Weight 2600 g / HDMI / GPS / Bluetooth</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Dell DHT226445</h4>
+									<div class="product-code">Code: 278025</div>
+									<div class="product-price">$ 1200</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278025">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">Notebook</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Dell</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278049" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product3.jpg" alt="product9">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Monitor diagonal 9" / Matrix type: E lnk Pearl / Resolution: 1600x1200 / Memory 6 GB / Weight 190&nbsp;g</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">PocketBook ACJ838K4</h4>
+									<div class="product-code">Code: 278049</div>
+									<div class="product-price">$ 90</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278049">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">E-book</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">PocketBook</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278053" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product4.jpg" alt="product10">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Monitor diagonal 6.0" / Camera: 3.2Mp / RAM: 4&nbsp;Gb / Orange / 1100 mA/h / Weight 220 g / WiFi / Bluetooth / Dictophone / USB</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Prestigio DOF74132</h4>
+									<div class="product-code">Code: 278053</div>
+									<div class="product-price">$ 300</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278053">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">Smartphone</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Prestigio</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278033" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product5.jpg" alt="product11">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Details</span>Monitor diagonal 4.0" / Camera: 1.2Mp / RAM: 4&nbsp;Gb / Orange / 1500 mA/h / Weight 150 g / WiFi / Bluetooth / Dictophone / USB</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Nokia DB5180638</h4>
+									<div class="product-code">Code: 278033</div>
+									<div class="product-price">$ 80</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278033">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">Phone</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Nokia</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+							<div id="product278034" class="panel panel-default product">
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="img/product6.jpg" alt="product12">
+										<div class="product-discription">
+											<div class="product-discription-cell">
+												<div><span class="product-discription-title">Monitor 9" / RAM 3 GB / HDD 370 GB / Black / Weight 260 g / Bluetooth / 3G / USB / GPS</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="product-name">Lenovo</h4>
+									<div class="product-code">Code: 278034</div>
+									<div class="product-price">$ 400</div>
+									<button class="btn btn-primary pull-right buy-btn" data-id-product="278034">Buy</button>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Category: </small><span class="product-category">Tablet</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="product-producer">Lenovo</span></li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+					</div>
+					<img id="load-more-indicator" src="img/loading.gif" class="hidden center-block" alt="loading">
+					<button id="load-more" class="btn btn-success">Load more products</button>
+				</div>
+				<div id="add-product-popup" class="modal fade" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">Add product to shopping cart</h4>
+				 			</div>
+							<div class="modal-body row">
+								<div class="col-xs-12 col-sm-6">
+									<div class="thumbnail">
+										<img class="add-product-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="product image">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<h4 class="add-product-name text-center">NoName</h4>
+									<ul class="list-group hidden-xs">
+										<li class="list-group-item"><small>Category: </small><span class="add-product-category">?</span></li>
+										<li class="list-group-item"><small>Producer: </small><span class="add-product-producer">?</span></li>
+									</ul>
+									<ul class="list-group">
+										<li class="list-group-item"><small>Price: </small><span class="add-product-price">0</span></li>
+										<li class="list-group-item"><small>Count: </small><input type="number" class="add-product-count" value="1" min="1" max="10"></li>
+										<li class="list-group-item"><small>Cost: </small><span class="add-product-cost">0</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<img id="add-to-cart-indicator" src="img/loading.gif" class="hidden" alt="loading">
+								<button id="add-to-cart" type="button" class="btn btn-primary">Add to cart</button>
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="text-center">shop demo for <a href="#">EShop</a></div>
+		</div>
+	</footer>
+</body>
+</html>

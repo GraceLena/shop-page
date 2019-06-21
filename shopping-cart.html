@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Shopping cart</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+	<script src="js/jquery-3.4.1.min.js" defer></script>
+	<script src="js/bootstrap.min.js" defer></script>
+	<script src="js/script.js" defer></script>	
+</head>
+<body>
+
+	<header class="container-fluid">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#eshop-nav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">EShop</a>
+				</div>
+				<div id="eshop-nav" class="collapse navbar-collapse">
+					<ul id="shopping-cart-menu" class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-shopping-cart"></i> Shopping cart (<span class="total-count">0</span>)<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu shopping-cart-items">
+								<li>Total count: <span class="total-count"></span></li>
+								<li>Total cost: <span class="total-cost"></span></li>
+								<li><button class="btn btn-primary btn-block"><a href="shopping-cart.html">View cart</a></button></li>
+							</ul>
+						</li>
+					</ul>
+					<button id="sign-in-btn" href="#" class="btn btn-primary navbar-btn navbar-right"><i class="fab fa-facebook-f"></i>Sign in</button>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<aside class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+				<div class="visible-xs-block xs-options-container">
+					<a class="pull-right" data-toggle="collapse" href="#product-catalog">Product catalog <span class="caret"></span></a>
+					<a data-toggle="collapse" href="#find-products">Find products <span class="caret"></span></a>
+				</div>
+				<form id="product-search" action="index.html">
+					<div id="find-products" class="panel panel-success collapse">
+						<div class="panel-heading">Find product</div>
+						<div class="panel-body">
+							<div class="input-group">
+								<input type="text" class="form-control" name="product-search-query" placeholder="Search query">
+								<span class="input-group-btn">
+									<button class="btn btn-default" id="btn-search" type="submit">Go!</button>
+								</span>
+							</div>
+							<div class="more-options">
+								<a data-toggle="collapse" href="#search-options">
+									More filters <span class="caret"></span>
+								</a>
+							</div>
+						</div>
+						<div id="search-options" class="panel-success collapse">
+							<div class="panel-heading">Category filters</div>
+							<div class="panel-body categories">
+								<label><input type="checkbox" id="all-categories"> All</label>
+								<div class="form-group">
+									<div class="checkbox">
+										<label><input type="checkbox" name="category" value="1" class="search-option"> E-book (78)</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="checkbox">
+										<label><input type="checkbox" name="category" value="2" class="search-option"> MP3-player (75)</label>
+									</div>
+								</div>
+							</div>
+							<div class="panel-heading producers">Producer filters</div>
+							<div class="panel-body">
+								<label><input type="checkbox" id="all-producers"> All</label>
+								<div class="form-group">
+									<div class="checkbox">
+										<label><input type="checkbox" name="producer" value="1" class="search-option"> Dell (56)</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="checkbox">
+										<label><input type="checkbox" name="producer" value="2" class="search-option"> Lenovo (22)</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div id="product-catalog" class="panel panel-success collapse">
+					<div class="panel-heading">Product catalog</div>
+					<div class="list-group">
+						<a href="#" class="list-group-item">E-book<span class="badge">78</span></a>
+						<a href="#" class="list-group-item">MP3-player<span class="badge">75</span></a>
+						<a href="#" class="list-group-item">Notebook<span class="badge">110</span></a>
+						<a href="#" class="list-group-item">Phone<span class="badge">113</span></a>
+						<a href="#" class="list-group-item">Smartphone<span class="badge">216</span></a>
+						<a href="#" class="list-group-item">Smartwatch<span class="badge">95</span></a>
+						<a href="#" class="list-group-item">Tablet<span class="badge">211</span></a>
+					</div>
+				</div>
+			</aside>
+			<main class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+				<div id="shopping-cart">
+					<div class="alert alert-warning" role="alert">To make order, please sign in</div>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Product</th>
+								<th>Price</th>
+								<th>Count</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="product1" class="table-row">
+								<td class="text-center">
+									<img src="img/product1.jpg" alt="product1"><br>Product name 1
+								</td>
+								<td class="price">$ 30</td>
+								<td class="count">2</td>
+								<td>
+									<div class="btn btn-danger remove-product" data-id-product="1" data-count="1">Remove one</div>
+								</td>
+							</tr>
+							<tr id="product2" class="table-row">
+								<td class="text-center">
+									<img src="img/product2.jpg" alt="product2"><br>Product name 2
+								</td>
+								<td class="price">$ 1200</td>
+								<td class="count">2</td>
+								<td>
+									<div class="btn btn-danger remove-product" data-id-product="2" data-count="1">Remove one</div><br><br>
+									<div class="btn btn-danger remove-product remove-all" data-id-product="2" data-count="1">Remove all</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" class="text-right"><strong>Total:</strong></td>
+								<td colspan="2" class="total">$ 2460</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="row">
+						<div class="col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5">
+							<button class="btn-primary btn-block"><i class="fab fa-facebook-f"></i> Sign in</button>
+						</div>						
+					</div>
+					
+				</div>
+			</main>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="text-center">shop demo for <a href="#">EShop</a></div>
+		</div>
+	</footer>
+</body>
+</html>
